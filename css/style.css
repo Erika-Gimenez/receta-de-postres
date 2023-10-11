@@ -42,43 +42,59 @@ a{
     text-decoration: none;
 }
 
+p{
+    margin: 0;
+    
+}
+
 .div-header{
-    display: flex;
-     justify-content: space-evenly; 
+    display: flex;  
      align-items: center;
      background-color: var(--color-b);
-     height: 15vh;
+     height: 13vh;
+     width: 100%;
 }
+
+/* logo */
 
 .div-logo{
     display: flex;
-    /* justify-content: flex-start; */
     align-items: center;
 }
 
 .logo{
+    
     width: 19%;
     filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
+}
+
+
+.texto-logo{
+    
+    font-family: 'Dancing Script', sans-serif;
+    color: var(--color-blanco);
+    font-size: 2.5vw;
 }
 
 /* nav */
 
 .nav{
     display: flex;
-    justify-content: flex-end;
+    /* justify-content: flex-end;  */
+   
 }
 .div-nav{
     
     display: flex;
-
-
+    width: 100%;
 }
 
 .nav-ul{
     display: flex;
-    align-items: center;
+    /* align-items: center; */
     gap: 20px;
     padding-right: 15px;
+    width: 100%;
 }
 .a-nav{
 font-size:1rem ;
@@ -88,40 +104,37 @@ font-weight: bold;
 }
 
 .a-nav:hover{
-color: var(--color-secundario);
+color: var(--color-d);
 
 }
 
-.texto-logo{
-    
-    font-family: 'Dancing Script', sans-serif;
-    color: var(--color-blanco);
-    font-size: 3.2vw;
-}
+
+
 
 /* banner */
 
 .banner{
-    background:linear-gradient(rgba(180, 182, 184, 0.399), rgba(180, 182, 184, 0.399)), url(/imagenes/utensilios-de-reposteria-banner.jpg);
+    background:linear-gradient(rgba(180, 182, 184, 0.421), rgba(180, 182, 184, 0.421)), url(/imagenes/utensilios-de-reposteria-banner.jpg);
 height: 37rem;
 background-size: cover;
 /* opacity: 0.4; */
 display: flex;
 justify-content: flex-end;
 align-items: center;
+width: 100%;
 }
 
 .banner-texto{
     
     display: flex;
     justify-content:center ;
-    width: 70%;
+    width: 60%;
     flex-wrap: wrap;
-    padding-right: 4rem;
+    padding-right: 2rem;
 }
 
 .banner-titulo{
-font-size: 4rem;
+font-size: 5rem;
 font-family: 'Dancing Script', sans-serif;
 color: var(--color-blanco);
 padding-bottom: 15px;
@@ -139,13 +152,13 @@ padding-bottom: 15px;
 }
 
 .imag{
-   max-width: 100%;
+  
     height: 40vh;
     object-fit: cover;
 }
 
 .formm{
-    max-width: 100%;
+    /* max-width: 100%; */
     margin:2rem 6rem ;
     
 }
@@ -174,28 +187,164 @@ padding-bottom: 15px;
     padding-top: 1rem;
 }
 
+.btn{
+    background-color: #ce7178;
+    border-color: aliceblue;
+}
+
+.btn:hover{
+    background-color: var(--color-d);
+    border-color: aliceblue; 
+}
+
 /* footer */
 
 .div-footer{
     display: flex;
     justify-content: center;
     align-items: center;
-   height: 12vh;
+   height: 10vh;
     background-color: var(--color-b);
-    max-width: 100%;
+   width: 100%;
 }
 
 .ul-footer{
     display: flex;
     gap: 5rem;
-    max-width: 100%;
+   
 }
 
 .a-footer{
     color: var(--color-blanco);
-    max-width: 100%;
+ 
 }
 
 .a-footer:hover{
     color: var(--color-secundario);
 }
+
+@media screen and (max-width:768px) {
+
+    .logo{
+        width: 30%;
+    }
+    
+      .texto-logo{
+        font-size: 1.7rem; 
+    }
+    
+.nav-ul{
+    gap: 10px;
+}
+
+    .a-nav{
+        font-size: 0.8rem;
+    }
+
+    .banner{
+    height: 70vh;
+    }
+
+    .banner-texto{
+        width: 100%;
+          } 
+
+          
+    .ul-footer{
+    gap: 2rem;
+    } 
+
+    .a-footer{
+        font-size: .8rem;
+    }
+      
+}
+
+ @media screen and (max-width:460px) {
+    .div-header{
+        display: flex;  
+       flex-direction: column;
+        
+        align-items: stretch;
+         
+    }
+
+    .div-logo{
+        border-bottom: 1px solid white;
+    }
+    .logo{
+        width: 18%;
+    }
+
+    .texto-logo{
+        font-size: 1.2rem;
+    }
+
+   .div-nav{
+   
+    display: flex;
+    
+   }
+    .nav-ul{
+        background-color: var(--color-b);
+        display: flex;
+       
+        justify-content: flex-end;
+        gap: 10px;
+        align-items: center;
+    }
+
+    /* banner */
+
+    .banner{
+       background-size: 560px 500px;
+       background-repeat: no-repeat;
+       height: 60vh;
+    }
+
+    .banner-texto{
+        padding-right: .5rem;
+    }
+
+    .banner-titulo{
+        font-size: 3rem;
+    }
+
+    .banner-parrafo{
+        font-size: 1rem;
+    }
+
+    /* cards */
+
+    .cards{
+        margin: 1rem 1rem;
+    }
+    .g-5, .gx-5 {
+        --bs-gutter-x: 0rem;
+    }
+
+    /* formulario */
+
+    .formm{
+        margin: 1rem 1rem;
+    }
+
+    .titulo-label-formm{
+        font-size: .9rem;
+        text-align: center;
+    }
+
+    /* footer */
+
+    .div-footer{
+        height: auto;
+    }
+    .ul-footer{
+display: flex;
+flex-direction: column;
+gap: 10px;
+text-align: center;
+    }
+  
+
+} 
