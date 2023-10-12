@@ -115,7 +115,7 @@ color: var(--color-d);
 /* banner */
 
 .banner{
-    background:linear-gradient(rgba(180, 182, 184, 0.421), rgba(180, 182, 184, 0.421)), url(/imagenes/utensilios-de-reposteria-banner.jpg);
+    background-image:linear-gradient(rgba(180, 182, 184, 0.243), rgba(180, 182, 184, 0.224)), url(../imagenes/utensilios-de-reposteria-banner.jpg);
 height: 37rem;
 background-size: cover;
 /* opacity: 0.4; */
